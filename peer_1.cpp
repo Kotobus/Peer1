@@ -32,7 +32,7 @@ public:
 		uint64_t counter = std::accumulate(pages_read_.begin() + 1, pages_read_.begin() + persons_[id], 0);
 		return static_cast<double>(counter * (1 / static_cast<double>((pages_read_[0] - 1))));
 	}
-
+	~Persons() = default;
 
 	std::vector<uint32_t> persons_;// [100001] ;
 	std::vector<uint32_t> pages_read_;// [1001] ;
